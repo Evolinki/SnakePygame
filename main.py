@@ -7,8 +7,8 @@ from Wall import *
 from Game import *
      
 pygame.init
-score_value=0
-VERTICAL = 15
+pygame.font.init
+VERTICAL = 10
 HORIZONTAL = 15
 TAILLE_CASE = 40
 
@@ -24,14 +24,10 @@ snake = Snake()
 game = Game()
 wall = Wall()
 pygame.init()
+pygame.font.init()
 
-font = pygame.font.SysFont("monospace", 16)
-textx= 10
-texty= 10
 
-def compteur(VERTICAL,HORIZONTAL):       
-    score = font.render("Score :" + str(score_value),True, (255,255,255))
-    FENETRE.blit(score, (VERTICAL,HORIZONTAL))
+
 def Grille():
     for i in range(0, VERTICAL):
         for j in range(0,HORIZONTAL):
@@ -68,6 +64,6 @@ while game_on:
     Grille()
     Game()    
     game.draw_game()
-    compteur(textx,texty)
+    game.compteur(VERTICAL,HORIZONTAL)
     pygame.display.update()
     FPS.tick(60)

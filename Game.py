@@ -6,13 +6,17 @@ from Snake import *
 from Wall import *
 from Game import *
 
-
+pygame.font.init()
 
 class Game:
     def __init__(self):
         self.snake = Snake()
         self.cherry = Cherry()
         self.wall = Wall()
+        self.score_value=0
+        self.font = pygame.font.SysFont("monospace", 16,False,False)
+        self.textx= 10
+        self.texty= 10
         
     def update(self):
         self.snake.action_snake()
@@ -54,6 +58,9 @@ class Game:
             print("Aie, le Serpent a confondu un mur avec une cerise :,(")
             pygame.quit()
             sys.exit
-    
+            
+    def compteur(self,VERTICAL,HORIZONTAL):       
+        score = self.font.render("Score :" + str(self.score_value),True, (255,255,255))
+        FENETRE.blit(score, (VERTICAL,HORIZONTAL))
     
     
