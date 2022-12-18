@@ -1,0 +1,15 @@
+ 
+ #fonction dans Game faisant en sorte que le fruit n'apparaissent pas sur le mur ou dans le serpent
+ #le jeu se lance mais bloque quand le serpent mange une cerise(aleatoire,ça peut etre des le premier fruit ou le 5eme) et je suis obliger de fermer la fenetre de force    
+"""
+def reload_cherry(self):
+        self.cherry = Cherry()
+        case_vide=True
+        while case_vide:
+            count = 0
+            for Block.block in self.snake.body:
+                if Block.block.x == self.cherry.block.x and self.cherry.block.y or Block.block.x == self.wall.block.x and self.wall.block.y:
+                    count += 1
+            if count == 0:
+                case_vide = False
+"""

@@ -16,7 +16,7 @@ Point = Game.repas
 FENETRE = pygame.display.set_mode(size=(VERTICAL * TAILLE_CASE, HORIZONTAL * TAILLE_CASE))
 FPS = pygame.time.Clock()
 F_UPDATE = pygame.USEREVENT
-pygame.time.set_timer(F_UPDATE, 200)
+pygame.time.set_timer(F_UPDATE, 100)
 
 game_on = True
 cherry = Cherry()

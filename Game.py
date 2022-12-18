@@ -38,8 +38,11 @@ class Game:
         else:
             self.snake.body.pop(0)
             
+        
     def reload_cherry(self):
         self.cherry = Cherry()
+        
+            
         
     def game_over(self):
         snake_taille = len(self.snake.body)
